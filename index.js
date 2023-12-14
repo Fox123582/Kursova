@@ -8,7 +8,7 @@ import {loginValidation, postCreateValidation, registerValidation} from "./valid
 
 
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI)
     .then(()=>console.log('DB ok'))
     .catch((err)=>console.log('DB error',err))
 
