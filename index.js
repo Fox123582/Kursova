@@ -8,7 +8,7 @@ import {loginValidation, postCreateValidation, registerValidation} from "./valid
 
 
 
-mongoose.connect('mongodb+srv://foxmax:16102003@cluster0.chxdcj1.mongodb.net/blog?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGODB_URL)
 
     .then(()=>console.log('DB ok'))
     .catch((err)=>console.log('DB error',err))
